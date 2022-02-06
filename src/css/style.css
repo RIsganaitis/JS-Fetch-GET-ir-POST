@@ -4,8 +4,6 @@ body{
 .property {
     display: flex;
     flex-wrap: wrap;
-    /* margin: 5px; */
-
 }
 .property div{
     margin: 2px;

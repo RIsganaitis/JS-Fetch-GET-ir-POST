@@ -18,35 +18,42 @@ fetch("https://radial-reinvented-shoe.glitch.me")
             document.querySelector(".property > div:last-child").append(city);
             document.querySelector(".property > div:last-child").append(description);
             array.push(element);
-            console.log(array);
             // console.log(element.price);
         });
         console.log(file);
         // document.getElementById("vilnius").addEventListener("click", cityFunction);
 
-        document.querySelector(".cities > button").addEventListener("click", cityFunction);
+        // document.querySelectorAll("button").addEventListener("click", cityFunction);
+        document.querySelector('.cities > .city').addEventListener("click", cityFunction);
 
-
+//miesto filtravimas pradžia
         function cityFunction(){
-            let currentCity = document.getElementById("vilnius").value;
+            let currentCity = document.querySelector("div.cities > button").value;
             console.log(currentCity);
-            // console.log(array);
-            file.forEach((cities) => {
-                console.log(cities.city);
-                let i = 0;
-                if(cities.city == currentCity){
+            for (let i = 0; i < file.length; i++){
+                if(file[i].city == currentCity){
                     console.log("sutampa");
-                    // document.querySelector(".property > div").style.display = "none";
-
                 }else{
                     console.log("nesutampa");
                     document.querySelector(".property > div:nth-child(" + i + ")").style.display = "none";
-
-                    // console.log(cities);
                 }
-                i++
-            })
+            }
+            // file.forEach((cities) => {
+            //     console.log(cities.city);
+            //     let i = 1;
+            //     if(cities.city == currentCity){
+            //         console.log("sutampa");
+            //         i = i + 1;
+            //     }else{
+            //         console.log("nesutampa");
+            //         document.querySelector(".property > div:nth-child(" + i + ")").style.display = "none"; //neina pasirinkti, kurį div paslėpti
+            //         i = i + 1;
+            //         // console.log(cities);
+            //     }
+            //     console.log(i);
+            // })
         }
+//miesto filtravimas pabaiga
         // console.log(file[0].description);
     })
 
