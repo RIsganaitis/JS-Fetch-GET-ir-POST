@@ -1,0 +1,70 @@
+body{
+    width: 100%;
+}
+.property {
+    display: flex;
+    flex-wrap: wrap;
+    /* margin: 5px; */
+
+}
+.property div{
+    margin: 2px;
+    border: solid 1px #888888;
+    box-shadow: 5px 10px 8px #888888;
+}
+.property div {
+    max-width: 200px;
+}
+.property div img {
+    width: 100%;
+}
+.property div h2, p{
+    padding: 0 5px 0 5px;
+}
+header{
+    background-color: rgb(24, 228, 160);
+    color: white;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+.navigation{
+    display: flex;
+    justify-content: space-between;
+}
+.addProp button{
+    border-radius: 3px;
+    background-color: rgb(24, 228, 160);
+    border: solid 1px rgb(24, 228, 160);
+    color: #fff;
+    padding: 4px;
+}
+.cities button{
+    border-radius: 3px;
+    background-color: #fff;
+    border: solid grey 1px;
+    padding: 4px;
+}
+.cities button:hover {
+    color: rgb(24, 228, 160);
+    border: solid 1px rgb(24, 228, 160);
+}
+nav {
+    margin-bottom: 10px;
+}
+.addProperty{
+    display: flex;
+    flex-direction: column;
+}
+.addProperty * {
+    margin: 5px;
+}
+.addProperty label{
+    font-weight: 800;
+}
+#newCity{
+    width: fit-content;
+}
